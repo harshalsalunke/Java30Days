@@ -22,10 +22,8 @@ public class Day3 {
 		}
 		else
 			System.out.println("Number entered is negative");
+		scan.close();
 		
-		
-		
-
 	}
 
 }
