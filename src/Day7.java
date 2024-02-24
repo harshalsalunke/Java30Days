@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Scanner;
 
@@ -22,5 +21,6 @@ public class Day7 {
 			System.out.println(str1+" and "+str2+" are anagrams of each other");
 		else
 			System.out.println(str1+" and "+str2+" are NOT anagrams of each other");
+		scan.close();
 		}
 }
