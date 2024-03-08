@@ -20,10 +20,9 @@ public class Day16 {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// Maximum Element in an Array
 		Scanner scan = new Scanner(System.in);
 		ArrayList<Integer> arr=new ArrayList<Integer>();
-		
 		System.out.println("Enter length of the Array: ");
 		int len=scan.nextInt();
 		System.out.println("Enter elements of Array: ");
