@@ -4,22 +4,17 @@ public class Day18 {
 
 	public static void main(String[] args) {
 		// Majority Element
-		int list[] = { 2, 3, 3, 5, 4, 7, 8, 3, 3 };
+		int list[] = { 2, 3, 8, 4, 8, 8, 8, 6, 7, 8 };
+		int n = list.length;
 		HashMap<Integer, Integer> count = new HashMap<>();
-		for (int i : list) {
-			if (count.containsKey(i)) {
-				count.put(i, count.get(i) + 1);
-			} else {
-				count.put(i, 1);
-			}
-		}
 		int majorityElement = -1;
-		int maxCount = 0;
-		for (int num : count.keySet()) {
-			int cnt = count.get(num);
-			if (cnt > maxCount) {
-				majorityElement = num;
-				maxCount = cnt;
+
+		for (int i : list) {
+			int newCount = count.getOrDefault(i, 0) + 1;
+			count.put(i, newCount);
+			if (newCount >= n / 2) {
+				majorityElement = i;
+				break;
 			}
 		}
 		System.out.println("Majority element is: " + majorityElement);
