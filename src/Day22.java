@@ -26,6 +26,8 @@ public class Day22 {
 			text1 = scan.nextLine();
 			System.out.println(text1);
 		}
+		
+		
 		br.close();
 		scan.close();
 
