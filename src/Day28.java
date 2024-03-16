@@ -8,12 +8,14 @@ public class Day28 {
 		int temp, j;
 		System.out.println("Original Array: "+Arrays.toString(arr));
 		for (int i = 1; i < arr.length; i++) {
-			j = i;
+			j = i;// Store the current index in j
+			// Move elements of arr[0..i-1], that are greater than the key, 
+			//to one position ahead of their current position
 			while (j > 0 && arr[j - 1] > arr[j]) {
 				temp = arr[j];
 				arr[j] = arr[j - 1];
 				arr[j - 1] = temp;
-				j--;
+				j--;// Move to the previous element
 			}
 		}
 		System.out.println("Sorted Array: "+Arrays.toString(arr));
